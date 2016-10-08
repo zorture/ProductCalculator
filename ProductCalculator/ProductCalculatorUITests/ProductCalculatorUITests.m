@@ -38,7 +38,8 @@
     
     XCUIElement *textField = [[[[XCUIApplication alloc] init].otherElements containingType:XCUIElementTypeStaticText identifier:@"Add string seperated by space or comma ( , )"] childrenMatchingType:XCUIElementTypeTextField].element;
     [textField tap];
-    [textField typeText:@"1,1,2,2,3,4,5,2,1"];
+    [textField typeText:@"2,4"];
+    
         
 }
 

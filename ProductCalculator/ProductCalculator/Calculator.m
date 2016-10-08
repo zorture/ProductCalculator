@@ -11,14 +11,19 @@
 @implementation Calculator
 
 +(NSString*)multiplyInputArray:(NSArray*)inputArray{
-    
-    NSInteger product = 1;
-    for (NSString* value in inputArray){
-        if (![value isEqualToString:@""]) {
+   
+    NSString* productString;
+    if(inputArray.count<3){
+        NSInteger product = 1;
+        for (NSString* value in inputArray){
             product *= value.integerValue;
         }
+        productString = [NSString stringWithFormat:@"%ld",(long)product];
     }
-    NSString* productString = [NSString stringWithFormat:@"%ld",(long)product];
+    else{
+        productString = @"Please enter less than 3 integers.";
+    }
+    
     return productString;
 }
 
